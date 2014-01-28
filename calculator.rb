@@ -28,6 +28,8 @@ def calculator
 		print 'Please enter a valid operator: '
 	end
 	
+	if operator == '^' then operator = '**' end #change caret to Ruby power function
+	
 	if operator == '!' then #perform factorial
 		answer = factorial(num1)
 		puts(num1.to_s + '! =' + answer.to_s)
