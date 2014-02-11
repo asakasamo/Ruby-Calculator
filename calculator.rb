@@ -1,16 +1,20 @@
 #Checks if the given parameter is a rational number
+#
+#input - the (String) value to test
 def isNumber (input)
 	true if Float(input) rescue false
 end
 
-#Perform factorial
+#Performs factorial
+#
+#num - the Integer value to perform factorial on
 def factorial (num)
 	(1..num).inject(:*) || 1
 end
 
 #Prompts the user to enter two operands and and operator and performs the operation.
 def calculator
-	#variables to store the operation parameters
+	#variables to store the operation parameters (all Strings)
 	num1, operator, num2, answer = '', '', '', ''
 	
 	#valid operators available
@@ -31,7 +35,7 @@ def calculator
 	if operator == '^' then operator = '**' end #change caret to Ruby power function
 	
 	if operator == '!' then #perform factorial
-		answer = factorial(num1)
+		answer = factorial(num1.to_i)
 		puts(num1.to_s + '! =' + answer.to_s)
 	else #perform other operations
 		print('Enter second operand: >> ')
