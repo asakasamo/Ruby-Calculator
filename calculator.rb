@@ -42,7 +42,12 @@ def calculator
 		while !isNumber(num2 = gets.chomp) #get and validate input
 			print 'Please enter a valid number: >> '
 		end
-		operation = (num1 + ' ' + operator + ' ' + num2) #string representation of the operation
+		
+		#convert operands to floats
+		num1 = Float(num1)
+		num2 = Float(num2)
+		
+		operation = (num1.to_s + ' ' + operator + ' ' + num2.to_s) #string representation of the operation
 		answer = eval(operation) #evaluate the full operation
 		puts (operation + ' = ' + answer.to_s) #print answer
 	end
