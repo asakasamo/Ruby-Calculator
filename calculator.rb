@@ -47,9 +47,13 @@ def calculator
 		num1 = Float(num1)
 		num2 = Float(num2)
 		
-		operation = (num1.to_s + ' ' + operator + ' ' + num2.to_s) #string representation of the operation
-		answer = eval(operation) #evaluate the full operation
-		puts (operation + ' = ' + answer.to_s) #print answer
+		if(operator == '/' && num2 == 0)
+			puts 'Cannot divide by zero.'
+		else			
+			operation = (num1.to_s + ' ' + operator + ' ' + num2.to_s) #string representation of the operation
+			answer = eval(operation) #evaluate the full operation
+			puts (operation + ' = ' + answer.to_s) #print answer
+		end
 	end
 	
 	
