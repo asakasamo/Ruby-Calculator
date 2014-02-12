@@ -9,6 +9,7 @@ end
 #
 #num - the Integer value to perform factorial on
 def factorial (num)
+	raise "Invalid factorial input" if num < 0
 	(1..num).inject(:*) || 1
 end
 
@@ -35,8 +36,12 @@ def calculator
 	if operator == '^' then operator = '**' end #change caret to Ruby power function
 	
 	if operator == '!' then #perform factorial
-		answer = factorial(num1.to_i)
-		puts(num1.to_s + '! =' + answer.to_s)
+		begin
+			answer = factorial(num1.to_i)
+			puts(num1.to_s + '! =' + answer.to_s)
+		rescue
+			puts "Invalid input for factorial."
+		end
 	else #perform other operations
 		print('Enter second operand: >> ')
 		while !isNumber(num2 = gets.chomp) #get and validate input
