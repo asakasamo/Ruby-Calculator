@@ -1,6 +1,6 @@
 # A Calculator in Ruby
 
-Just a simple command line calculator. Supports all of the following operations:
+This is a simple command-line calculator. Supports all of the following operations:
 * Addition
 * Subtraction
 * Multiplication
