@@ -1,4 +1,4 @@
-# A Calculator **in _Ruby_**
+# A Calculator in Ruby**
 ### by Al-John Sakasamo
 
 Just a simple command line calculator. Supports all of the following operations:
